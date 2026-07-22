@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://la85bpjldl4p"
+path="res://.godot/imported/theyre eating my flesh.wav-f2bb6ad615d193aab7df15d9eb21536d.sample"
+
+[deps]
+
+source_file="res://audio/theyre eating my flesh.wav"
+dest_files=["res://.godot/imported/theyre eating my flesh.wav-f2bb6ad615d193aab7df15d9eb21536d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
