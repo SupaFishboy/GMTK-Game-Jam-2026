@@ -113,6 +113,8 @@ _data = {
 &"progress": SubResource("Animation_i6nbm")
 }
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3fodd"]
+
 [node name="ExampleBalloon" type="CanvasLayer" unique_id=785606538]
 layer = 100
 script = ExtResource("1_s2gbs")
@@ -219,7 +221,9 @@ script = ExtResource("3_1j1j0")
 
 [node name="ResponseExample" type="Button" parent="Balloon/ResponsesMenu" unique_id=373226516]
 layout_mode = 2
-text = "Response Example"
+theme_override_fonts/font = ExtResource("2_3fodd")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3fodd")
+text = "RESPONSE EXAMPLE"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=414777643]
 unique_name_in_owner = true
