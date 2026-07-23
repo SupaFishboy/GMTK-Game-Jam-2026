@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://j0b01mq0uu40"]
+
+[ext_resource type="Texture2D" uid="uid://bgt8b3h1m8jke" path="res://graphics/Demo-GMTK-Game-Jame-Office.png" id="1_3e7dm"]
+
+[node name="Office" type="Node2D" unique_id=228403100]
+texture_filter = 1
+
+[node name="DemoOffice" type="Sprite2D" parent="." unique_id=126086973]
+position = Vector2(160, 120)
+texture = ExtResource("1_3e7dm")
+
+[node name="Number1" type="AnimatedSprite2D" parent="DemoOffice" unique_id=303890380]
+
+[node name="Number2" type="AnimatedSprite2D" parent="DemoOffice" unique_id=553726050]
+
+[node name="Number3" type="AnimatedSprite2D" parent="DemoOffice" unique_id=438212542]
+
+[node name="Number4" type="AnimatedSprite2D" parent="DemoOffice" unique_id=562889727]
+
+[node name="Timer" type="Timer" parent="." unique_id=334095476]
+wait_time = 90.0
