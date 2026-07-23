@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://grhd5015nyya"]
+[gd_scene format=3 uid="uid://cgouyr0poa6x2"]
 
-[ext_resource type="Script" uid="uid://c5jx76iqrnmqp" path="res://scenes/testscript.gd" id="1_5hgee"]
-
-[node name="Node2D" type="Node2D" unique_id=345022200]
-script = ExtResource("1_5hgee")
+[node name="MainMenu" type="Control" unique_id=1785243364]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
