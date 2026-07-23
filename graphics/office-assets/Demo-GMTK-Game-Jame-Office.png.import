@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cf7fmnh8adb4w"
-path="res://.godot/imported/4.png-8b5156e6ac4b3ca7df0c775113684f7e.ctex"
+uid="uid://bgt8b3h1m8jke"
+path="res://.godot/imported/Demo-GMTK-Game-Jame-Office.png-e7f700ebe1bab85ca6c921de53f6ecc5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/numbers/4.png"
-dest_files=["res://.godot/imported/4.png-8b5156e6ac4b3ca7df0c775113684f7e.ctex"]
+source_file="res://graphics/office-assets/Demo-GMTK-Game-Jame-Office.png"
+dest_files=["res://.godot/imported/Demo-GMTK-Game-Jame-Office.png-e7f700ebe1bab85ca6c921de53f6ecc5.ctex"]
 
 [params]
 

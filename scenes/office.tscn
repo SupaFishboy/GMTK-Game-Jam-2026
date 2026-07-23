@@ -1,21 +1,120 @@
 [gd_scene format=3 uid="uid://j0b01mq0uu40"]
 
-[ext_resource type="Texture2D" uid="uid://bgt8b3h1m8jke" path="res://graphics/Demo-GMTK-Game-Jame-Office.png" id="1_3e7dm"]
+[ext_resource type="Texture2D" uid="uid://bgt8b3h1m8jke" path="res://graphics/office-assets/Demo-GMTK-Game-Jame-Office.png" id="1_3e7dm"]
+[ext_resource type="Script" uid="uid://dplnqhoikxnax" path="res://scripts/office.gd" id="1_jwaux"]
+[ext_resource type="FontFile" uid="uid://2eegdl3q24cn" path="res://graphics/fonts/17x16GMTK-Timer-Font.ttf" id="3_7jj4f"]
+[ext_resource type="Texture2D" uid="uid://cu3haqexnpp3b" path="res://graphics/office-assets/Realistic-phone-GMTK.png" id="4_7jj4f"]
+[ext_resource type="Script" uid="uid://cp4xb307jny0" path="res://scripts/phone.gd" id="5_qphb6"]
 
-[node name="Office" type="Node2D" unique_id=228403100]
+[sub_resource type="Animation" id="Animation_qphb6"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Phone:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(342.08, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Phone:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(187.5, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Phone:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.09599311, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_hub07"]
+resource_name = "new_animation"
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Phone:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(261, -0.25, 0, 0.25, 0, 342.08, -0.11666667, -13.513331, 0, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Phone:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(187.5, -0.25, 0, 0.25, 0, 187.5, -0.11666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Phone:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -0.09599311, -0.11666667, 0.015998852, 0, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2knxt"]
+_data = {
+&"RESET": SubResource("Animation_qphb6"),
+&"new_animation": SubResource("Animation_hub07")
+}
+
+[node name="Office" type="Node2D" unique_id=228403100 node_paths=PackedStringArray("wall_timer", "timer")]
 texture_filter = 1
+script = ExtResource("1_jwaux")
+wall_timer = NodePath("Label")
+timer = NodePath("Timer")
 
 [node name="DemoOffice" type="Sprite2D" parent="." unique_id=126086973]
 position = Vector2(160, 120)
 texture = ExtResource("1_3e7dm")
 
-[node name="Number1" type="AnimatedSprite2D" parent="DemoOffice" unique_id=303890380]
-
-[node name="Number2" type="AnimatedSprite2D" parent="DemoOffice" unique_id=553726050]
-
-[node name="Number3" type="AnimatedSprite2D" parent="DemoOffice" unique_id=438212542]
-
-[node name="Number4" type="AnimatedSprite2D" parent="DemoOffice" unique_id=562889727]
+[node name="Label" type="Label" parent="." unique_id=2141123538]
+offset_left = 224.0
+offset_top = 10.0
+offset_right = 300.0
+offset_bottom = 37.0
+theme_override_colors/font_color = Color(0.9192808, 4.47616e-06, 1.1551381e-06, 1)
+theme_override_fonts/font = ExtResource("3_7jj4f")
+theme_override_font_sizes/font_size = 35
+text = "90  00"
 
 [node name="Timer" type="Timer" parent="." unique_id=334095476]
 wait_time = 90.0
+autostart = true
+
+[node name="Phone" type="Sprite2D" parent="." unique_id=1806714677]
+position = Vector2(342.08, 187.5)
+rotation = -0.09599311
+texture = ExtResource("4_7jj4f")
+script = ExtResource("5_qphb6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Phone" unique_id=1296428869]
+root_node = NodePath("../../Timer")
+libraries/ = SubResource("AnimationLibrary_2knxt")
