@@ -1,14 +1,19 @@
 [gd_scene format=3 uid="uid://brdm1c78ombij"]
 
+[ext_resource type="PackedScene" uid="uid://c34rj1hdxmwor" path="res://dialogue/balloon.tscn" id="1_d2op2"]
 [ext_resource type="PackedScene" uid="uid://j0b01mq0uu40" path="res://scenes/office.tscn" id="1_s3esy"]
+[ext_resource type="Resource" uid="uid://ca5j8p5su1vwu" path="res://dialogue/main_dialogue.dialogue" id="2_0rdsr"]
 
 [node name="MainGame" type="Node" unique_id=165494663]
 process_mode = 3
 
-[node name="SystemsPlaceholder" type="Node" parent="." unique_id=80165462]
-
 [node name="World" type="Node2D" parent="." unique_id=283226305]
 process_mode = 1
+
+[node name="ExampleBalloon" parent="World" unique_id=785606538 instance=ExtResource("1_d2op2")]
+offset = Vector2(16, -45.5)
+transform = Transform2D(1, 0, 0, 1, 16, -45.5)
+dialogue_resource = ExtResource("2_0rdsr")
 
 [node name="Office" parent="World" unique_id=228403100 instance=ExtResource("1_s3esy")]
 unique_name_in_owner = true
