@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://brdm1c78ombij"]
 
+[ext_resource type="PackedScene" uid="uid://j0b01mq0uu40" path="res://scenes/office.tscn" id="1_s3esy"]
+
 [node name="MainGame" type="Node" unique_id=165494663]
 process_mode = 3
 
@@ -8,7 +10,7 @@ process_mode = 3
 [node name="World" type="Node2D" parent="." unique_id=283226305]
 process_mode = 1
 
-[node name="LevelRoot" type="Node2D" parent="World" unique_id=1251891494]
+[node name="Office" parent="World" unique_id=228403100 instance=ExtResource("1_s3esy")]
 unique_name_in_owner = true
 
 [node name="EffectsRoot" type="Node2D" parent="World" unique_id=33935699]
