@@ -11,4 +11,7 @@ func _process(delta: float) -> void:
 	pass
 
 func pick_up():
-	
+	$AnimationPlayer.play("pick_up")
+
+func put_down():
+	$AnimationPlayer.play("put_down")

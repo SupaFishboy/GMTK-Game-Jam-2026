@@ -8,42 +8,9 @@
 
 [sub_resource type="Animation" id="Animation_qphb6"]
 length = 0.001
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Phone:position:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(342.08, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../Phone:position:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(187.5, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/2/type = "bezier"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../Phone:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-0.09599311, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
 
 [sub_resource type="Animation" id="Animation_hub07"]
-resource_name = "new_animation"
+resource_name = "pick_up"
 length = 0.5
 tracks/0/type = "bezier"
 tracks/0/imported = false
@@ -79,10 +46,48 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.5)
 }
 
+[sub_resource type="Animation" id="Animation_2knxt"]
+resource_name = "put_down"
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Phone:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(342.08, -0.11666667, -13.513331, 0, 0, 261, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Phone:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(187.5, -0.11666667, 0, 0, 0, 187.5, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Phone:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-0.09599311, -0.11666667, 0.015998852, 0, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2knxt"]
 _data = {
 &"RESET": SubResource("Animation_qphb6"),
-&"new_animation": SubResource("Animation_hub07")
+&"pick_up": SubResource("Animation_hub07"),
+&"put_down": SubResource("Animation_2knxt")
 }
 
 [node name="Office" type="Node2D" unique_id=228403100 node_paths=PackedStringArray("wall_timer", "timer")]
@@ -110,8 +115,7 @@ wait_time = 90.0
 autostart = true
 
 [node name="Phone" type="Sprite2D" parent="." unique_id=1806714677]
-position = Vector2(342.08, 187.5)
-rotation = -0.09599311
+position = Vector2(261, 187.5)
 texture = ExtResource("4_7jj4f")
 script = ExtResource("5_qphb6")
 
