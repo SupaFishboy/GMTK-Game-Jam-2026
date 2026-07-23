@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ebwym8ufa48k" path="res://graphics/Menu Background.png" id="1_3vvtq"]
 [ext_resource type="Texture2D" uid="uid://dbvk3db8qj0rh" path="res://graphics/playbutton.png" id="2_s5g8n"]
 [ext_resource type="Texture2D" uid="uid://bpebe14wdhy75" path="res://graphics/settings.png" id="3_7yvfd"]
+[ext_resource type="Script" uid="uid://cd60rupjpr0ny" path="res://scripts/playbuttonpress.gd" id="3_s5g8n"]
 [ext_resource type="Texture2D" uid="uid://w4hb3qrv2irn" path="res://graphics/credits.png" id="4_dfy5j"]
 
 [node name="main menu UI" type="Control" unique_id=120444695]
@@ -23,12 +24,40 @@ position = Vector2(38.000004, 174)
 scale = Vector2(1.6041666, 1.5)
 texture = ExtResource("2_s5g8n")
 
+[node name="Button" type="Button" parent="Playbutton" unique_id=532456205]
+modulate = Color(0, 0, 0, 1)
+show_behind_parent = true
+z_index = -1
+offset_left = -21.194809
+offset_top = -12.666672
+offset_right = 21.194801
+offset_bottom = 12.6666565
+script = ExtResource("3_s5g8n")
+
 [node name="Settings" type="Sprite2D" parent="." unique_id=1018832896]
 position = Vector2(159, 201)
 scale = Vector2(1.6250002, 1.515625)
 texture = ExtResource("3_7yvfd")
 
+[node name="Button" type="Button" parent="Settings" unique_id=1211179429]
+modulate = Color(0, 0, 0, 1)
+show_behind_parent = true
+z_index = -1
+offset_left = -20.92308
+offset_top = -12.536085
+offset_right = 21.46653
+offset_bottom = 12.797243
+
 [node name="Credits" type="Sprite2D" parent="." unique_id=230384454]
 position = Vector2(276.00003, 176)
 scale = Vector2(1.4583334, 1.4375)
 texture = ExtResource("4_dfy5j")
+
+[node name="Button" type="Button" parent="Credits" unique_id=555726101]
+modulate = Color(0, 0, 0, 1)
+show_behind_parent = true
+z_index = -1
+offset_left = -21.257164
+offset_top = -12.521736
+offset_right = 21.132446
+offset_bottom = 12.811592
