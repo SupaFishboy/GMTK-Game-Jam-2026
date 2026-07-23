@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://clqdgupqc4eb3"]
+[gd_scene format=3 uid="uid://bptk1044uv5gu"]
 
-[node name="main menu" type="Control" unique_id=1785243364]
+[node name="main menu UI" type="Control" unique_id=120444695]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
