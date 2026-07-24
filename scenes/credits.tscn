@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://d3pvxb6gvm71c"]
+
+[ext_resource type="Texture2D" uid="uid://ebwym8ufa48k" path="res://graphics/menu/Menu Background.png" id="1_0ctdu"]
+[ext_resource type="Texture2D" uid="uid://haqybw0lt70m" path="res://graphics/menu/exitbutton.png" id="2_2fbfq"]
+[ext_resource type="Script" uid="uid://bt1g72n5kw13w" path="res://scripts/returntomenu.gd" id="3_8gwij"]
+
+[node name="Credits" type="Node2D" unique_id=2103486618]
+
+[node name="MenuBackground" type="Sprite2D" parent="." unique_id=2105027713]
+position = Vector2(159.99998, 120.00001)
+scale = Vector2(1.9999999, 2)
+texture = ExtResource("1_0ctdu")
+
+[node name="Exitbutton" type="Sprite2D" parent="." unique_id=1279716507]
+position = Vector2(160, 213)
+scale = Vector2(1.9999999, 2)
+texture = ExtResource("2_2fbfq")
+
+[node name="Button" type="Button" parent="Exitbutton" unique_id=701609032]
+z_index = -1
+offset_left = -25.0
+offset_top = -14.0
+offset_right = 24.0
+offset_bottom = 13.0
+script = ExtResource("3_8gwij")
+metadata/_edit_use_anchors_ = true

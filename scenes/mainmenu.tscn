@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://bptk1044uv5gu"]
 
-[ext_resource type="Texture2D" uid="uid://ebwym8ufa48k" path="res://graphics/Menu Background.png" id="1_3vvtq"]
-[ext_resource type="Texture2D" uid="uid://dbvk3db8qj0rh" path="res://graphics/playbutton.png" id="2_s5g8n"]
-[ext_resource type="Texture2D" uid="uid://bpebe14wdhy75" path="res://graphics/settings.png" id="3_7yvfd"]
+[ext_resource type="Texture2D" uid="uid://ebwym8ufa48k" path="res://graphics/menu/Menu Background.png" id="1_3vvtq"]
+[ext_resource type="Script" uid="uid://chsq13tbn3y2m" path="res://scripts/menumusic.gd" id="1_dfy5j"]
+[ext_resource type="Texture2D" uid="uid://dbvk3db8qj0rh" path="res://graphics/menu/playbutton.png" id="2_s5g8n"]
+[ext_resource type="Texture2D" uid="uid://bpebe14wdhy75" path="res://graphics/menu/settings.png" id="3_7yvfd"]
 [ext_resource type="Script" uid="uid://cd60rupjpr0ny" path="res://scripts/playbuttonpress.gd" id="3_s5g8n"]
-[ext_resource type="Texture2D" uid="uid://w4hb3qrv2irn" path="res://graphics/credits.png" id="4_dfy5j"]
+[ext_resource type="Texture2D" uid="uid://w4hb3qrv2irn" path="res://graphics/menu/credits.png" id="4_dfy5j"]
+[ext_resource type="Script" uid="uid://dnlqh0lve156q" path="res://scripts/settingsbutton.gd" id="5_7yvfd"]
 
 [node name="main menu UI" type="Control" unique_id=120444695]
 layout_mode = 3
@@ -13,6 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_dfy5j")
 
 [node name="MenuBackground" type="Sprite2D" parent="." unique_id=328067947]
 position = Vector2(160, 120)
@@ -47,6 +50,7 @@ offset_left = -20.92308
 offset_top = -12.536085
 offset_right = 21.46653
 offset_bottom = 12.797243
+script = ExtResource("5_7yvfd")
 
 [node name="Credits" type="Sprite2D" parent="." unique_id=230384454]
 position = Vector2(276.00003, 176)
